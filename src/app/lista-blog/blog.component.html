@@ -1,0 +1,21 @@
+<div class="usercontact-list">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Titulo</th>
+        <th>Descripcion</th>
+        <th>Fecha</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let blog of blogs">
+        <td>{{ blog.titulo }}</td>
+        <td>{{ blog.descipcion }}</td>
+        <td>{{ blog.fecha }}</td>
+        <td>{{ blog.tipo }}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+<div class="col-md-6">
+  <h2 class="text-center">Agregar Blog Local</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="titulo">Título:</label>
+      <input formControlName="titulo" placeholder="Ingresar titutlo" name="titulo" class="form-control" id="titulo">
+      <div class="feedback-red" *ngIf="isInvalid('titulo')">
+        Debe ingresar el titulo
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="descipcion">Descripción Blog:</label>
+      <input formControlName="descipcion" placeholder="Ingrese la descripción" name="descipcion" class="form-control"
+        id="descipcion">
+      <div class="feedback-red" *ngIf="isInvalid('descipcion')">
+        Debe ingresar la descripción
+      </div>
+    </div>
+
+    <button button [disabled]="addForm.invalid" class="btn btn-success">Registrar</button>
+    <button class="btn btn-danger ml-2 " (click)="onCancel()">Cancelar</button>
+  </form>
+</div>
